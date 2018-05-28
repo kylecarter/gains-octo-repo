@@ -1,0 +1,20 @@
+@import '../../sass/stylesheet.sass'
+
+.lnkSettings
+    font-size: 1.5em
+
+.section--content
+    margin-top: 42px
+    margin-bottom: 42px
+
+    .row
+        margin-bottom: 42px
+
+        &:last-child
+            margin-bottom: 0
+
+    .h3
+        margin: 0
+
+        +breakpoint( max-width nth( $scale, 5 ) )
+            font-size: emify( 20px )

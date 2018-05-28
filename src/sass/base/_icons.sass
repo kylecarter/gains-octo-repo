@@ -1,0 +1,42 @@
+.ico
+
+    &:before
+        margin-right: 9px
+        font: font-awesome()
+        display: inline-block
+    
+    &-after
+
+        &:before
+            content: ''
+            display: none
+        
+        &:after
+            margin-left: 9px
+            font: font-awesome()
+            display: inline-block
+
+    &-heart
+
+        &:before
+            content: '\f004'
+        
+        &.ico-after:after
+            content: '\f004'
+
+    &-cog
+
+        &:before
+            content: '\f013'
+        
+        &.ico-after:after
+            content: '\f013'
+
+    &-question-circle
+
+        &:before
+            content: '\f059'
+        
+        &.ico-after:after
+            content: '\f059'
+

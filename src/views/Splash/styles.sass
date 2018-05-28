@@ -1,0 +1,28 @@
+@import '../../sass/stylesheet.sass'
+
+.page-splash
+    +size( 100% )
+    overflow: hidden
+    background-color: $text-color
+    +position( fixed, 0 null null 0 )
+    background-image: radial-gradient( $primary 0%, transparent 100% )
+
+    .section--content
+        +size( 100%, 100vh )
+        align-items: center
+        flex-direction: row
+        border-radius: 100%
+        position: relative
+        text-align: center
+        flex-wrap: wrap
+        display: flex
+
+    .h1
+        color: $white
+        flex-basis: 100%
+        text-align: center
+        font-size: emify( 45px )
+
+        + img
+            +position( absolute, null null 35vh 50% )
+            transform: translateX( -50% )

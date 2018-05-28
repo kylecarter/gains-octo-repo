@@ -1,0 +1,38 @@
+@import '../../../sass/stylesheet.sass'
+    
+.context
+    +position( absolute, 0 0 null null )
+    display: inline-block
+    width: auto
+
+    .js-menu
+        +position( absolute, 0 0 null null )
+        color: inherit
+        z-index: 2
+
+        &:hover, &:active, &:focus
+            color: inherit
+            box-shadow: none
+
+    &.menu-open .js-menu.fa-ellipsis-v
+        color: $text-color
+        
+        &:before
+            content: '\f00d'
+
+    .list-menu
+        +position( absolute, 1px 1px null null )
+        background-color: $matte-bg
+        font-size: emify( 14px )
+        +size( 200px, auto )
+        padding: 0.625rem
+        display: none
+        z-index: 1
+
+        a
+            display: block
+            color: $text-color
+            padding: 0.625rem 0
+    
+    &.menu-open .list-menu
+        display: block

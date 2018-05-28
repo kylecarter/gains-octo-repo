@@ -1,0 +1,93 @@
+=placeholder()
+
+  &::-webkit-input-placeholder
+    @content
+
+  &::-moz-placeholder
+    @content
+
+  &:-ms-input-placeholder
+    @content
+
+  &:-moz-placeholder
+    @content
+
+  &::placeholder
+    @content
+
+  &:placeholder-shown
+    @content
+
+=placeholder-focus()
+
+  &:focus
+
+    &::-webkit-input-placeholder
+      @content
+
+    &::-moz-placeholder
+      @content
+
+    &:-ms-input-placeholder
+      @content
+
+    &:-moz-placeholder
+      @content
+
+    &::placeholder
+      @content
+
+    &:placeholder-shown
+      @content
+
+=opacity( $n )
+  -ms-filter: unquote( 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round( $n * 100 ) + ')' )
+  filter: unquote( 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round( $n * 100 ) + ')' )
+  filter: unquote( 'alpha( opactiy=' + round( $n * 100 ) + ')' )
+  -moz-opacity: $n
+  -khtml-opacity: $n
+  opacity: $n
+
+=user-select( $select )
+  -webkit-user-select: $select
+  -moz-user-select: $select
+  -ms-user-select: $select
+  user-select: $select
+
+=tab-focus()
+  outline: thin dotted
+  outline: 5px auto -webkit-focus-ring-color
+  outline-offset: -2px
+
+=stack()
+  float: none
+  width: auto
+  clear: both
+  margin-left: auto
+  margin-right: auto
+
+=center()
+  width: 100%
+  margin: 0 auto
+  display: block
+  max-width: $container
+
+=push( $size )
+  +position( relative, null null null percentage( $size / $container ) )
+
+=unpush()
+  left: auto
+
+=container()
+  margin: 0 auto
+  width: 100%
+  +clearfix
+
+  +breakpoint( nth( $scale, 4 ) + 1, nth( $scale, 5 ) )
+    width: 750px
+
+  +breakpoint( nth( $scale, 5 ) + 1 )
+    width: 970px
+
+  +breakpoint( nth( $scale, 6 ) + 1 )
+    width: 1170px

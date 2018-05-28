@@ -1,0 +1,53 @@
+$text-fields : text tel number url week time search password month email datetime-local date color
+%textfields
+    border-radius: 0
+    padding:
+        left: 0
+        right: 0
+    border-width: 2px
+    border-color: transparent
+    border-bottom-color: $border-color
+
+    &:hover, &:focus, &:active
+        outline: none
+        box-shadow: none
+        border-color: transparent
+        border-bottom-color: $primary
+    
+    &.valued
+        border-bottom-color: $primary
+
+.form-textfield
+    +position( relative, null null null null )
+
+
+
+@each $field in $text-fields
+
+    input[type="#{$field}"]
+        @extend %textfields
+
+        &.form-control
+            @extend %textfields
+
+        + label
+            +position( absolute, 0 null null 0 )
+            transition: top 150ms ease
+            margin: 0
+
+        &:focus, &:active, &.valued
+
+            + label
+                font-size: 0.875em
+                top: -1em
+
+textarea.form-control
+
+    &:hover, &:focus, &:active
+        border-color: $primary !important
+        box-shadow: 0 0 0 0.2rem rgba( $primary, 0.25 )!important
+
+    &.valued
+        border-color: $primary !important
+
+    

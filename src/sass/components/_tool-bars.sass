@@ -1,0 +1,28 @@
+%toolbar
+    box-shadow: 0 4px 4px rgba( $black, 0.24 )
+    padding: 16px 0
+    color: $white
+
+    .h1
+        margin: 0
+
+        +breakpoint( max-width nth( $scale, 5 ) )
+            font-size: emify( 20px )
+    a
+        color: $white
+    
+    .list-stats
+        margin-top: 16px
+
+
+.toolbar--purple
+    @extend %toolbar
+    background-color: $primary
+
+.toolbar--red
+    @extend %toolbar
+    background-color: $tertiary
+
+.toolbar--blue
+    @extend %toolbar
+    background-color: $secondary
